@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
@@ -27,7 +27,9 @@ public class Calendario {
 	private int calendario;
 	
 	@NotNull
-	private String DNI_usuario;
+	@ManyToOne()
+	@JoinColumn(name="DNI_usuario")
+	private Usuario usuario;
 	
 	@NotNull
 	private Date fecha_creacion;

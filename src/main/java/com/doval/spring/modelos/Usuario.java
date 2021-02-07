@@ -46,8 +46,7 @@ public class Usuario {
     @NotNull
 	private LocalDate fecha_nacimiento;
     
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name="usuario")
-//    private List<Calendario> calendarios;
+    @OneToMany(mappedBy="usuario",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Calendario> calendarios;
 
 }

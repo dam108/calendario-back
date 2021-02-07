@@ -19,7 +19,7 @@ public class CalendarioDto implements Serializable {
 	private int calendario;
 	
 	@JMap
-	private String DNI_usuario;
+	private minUsuarioDto usuario;
 	
 	@JMap
 	private Date fecha_creacion;

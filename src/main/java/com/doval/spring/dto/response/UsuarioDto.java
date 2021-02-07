@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.doval.spring.modelos.Calendario;
 import com.googlecode.jmapper.annotations.JMap;
 
 import lombok.Data;
@@ -41,8 +40,8 @@ public class UsuarioDto implements Serializable {
 	@JMap
 	private LocalDate fecha_nacimiento;
 	
-//	@JMap
-//	private List<Calendario> calendarios;
+	@JMap
+	private List<minCalendarioDto> calendarios;
 	
 	public UsuarioDto() {
 		super();
